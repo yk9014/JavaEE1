@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+  <display-name>Risyu</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+	<filter>
+		<filter-name>authenticatefilter</filter-name>
+		<filter-class>ttc.AuthenticateFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>authenticatefilter</filter-name>
+		<url-pattern>/productinput</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+
+	<jsp-config>
+	    <taglib>
+	      <taglib-uri>http://www.tera-house.ac.jp</taglib-uri>
+	      <taglib-location>/sample.tld</taglib-location>
+	    </taglib>
+	</jsp-config>
+
+	<servlet>
+		<servlet-name>productinput</servlet-name>
+		<jsp-file>/productinput.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>productinput</servlet-name>
+		<url-pattern>/productinput</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>orderlogin</servlet-name>
+		<jsp-file>/orderlogin.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>orderlogin</servlet-name>
+		<url-pattern>/orderlogin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>authenticate</servlet-name>
+		<servlet-class>ttc.AuthenticateServlet</servlet-class>
+	</servlet>	
+	<servlet-mapping>
+		<servlet-name>authenticate</servlet-name>
+		<url-pattern>/authenticate</url-pattern>
+	</servlet-mapping>
+
+
+  <servlet>
+  	<servlet-name>inputservlet</servlet-name>
+  	<servlet-class>InputServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>inputservlet</servlet-name>
+  	<url-pattern>/InputServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>result</servlet-name>
+  	<jsp-file>/result.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>result</servlet-name>
+  	<url-pattern>/result</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>multiinput</servlet-name>
+  	<servlet-class>MultiFormServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>multiinput</servlet-name>
+  	<url-pattern>/multiinput</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>mapresult</servlet-name>
+  	<jsp-file>/mapresult.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>mapresult</servlet-name>
+  	<url-pattern>/mapresult</url-pattern>
+  </servlet-mapping>
+	<servlet>
+		<servlet-name>input</servlet-name>
+		<jsp-file>/input.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>input</servlet-name>
+		<url-pattern>/input</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>adduser</servlet-name>
+		<servlet-class>AddUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adduser</servlet-name>
+		<url-pattern>/adduser</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>userslist</servlet-name>
+		<jsp-file>/userslist.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userslist</servlet-name>
+		<url-pattern>/userslist</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>front</servlet-name>
+		<servlet-class>FrontServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>front</servlet-name>
+		<url-pattern>/front</url-pattern>
+	</servlet-mapping>
+	
+
+</web-app>
