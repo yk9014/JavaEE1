@@ -1,12 +1,13 @@
 {
     "java.project.sourcePaths": [
-        "WEB-INF/classes"
+        "WEB-INF\\classes"
     ],
     "java.project.referencedLibraries": [
-        "/Users/yk/tomcat10/lib/servlet-api.jar",
-        "/Users/yk/tomcat10/lib/jsp-api.jar",
-        "WEB-INF/lib/jakarta.servlet.jsp.jstl-3.0.1.jar",
-        "WEB-INF/lib/jakarta.servlet.jsp.jstl-api-3.0.0.jar",
-        "WEB-INF/lib/ojdbc7.jar"
-    ]
+        "c:\\tomcat10\\lib\\jsp-api.jar",
+        "c:\\tomcat10\\lib\\servlet-api.jar",
+        "c:\\webapps\\JavaEE1\\WEB-INF\\lib\\ojdbc7.jar",
+        "c:\\webapps\\JavaEE1\\WEB-INF\\lib\\jakarta.servlet.jsp.jstl-3.0.1.jar",
+        "c:\\webapps\\JavaEE1\\WEB-INF\\lib\\jakarta.servlet.jsp.jstl-api-3.0.0.jar"
+    ],
+    "java.format.settings.url": ".vscode/java-formatter.xml"
 }
