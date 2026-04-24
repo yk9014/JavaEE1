@@ -1,7 +1,6 @@
 package jdbc;
 
-import java.io.IOException;
-import java.lang.reflect.Array;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.sql.Connection;

@@ -14,10 +14,10 @@ public class MultiFormServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.setCharacterEncoding("Windows-31J");
-        Map map = request.getParameterMap();
-        Set keySet = map.keySet();
-        Iterator it = keySet.iterator();
+		request.setCharacterEncoding("UTF-8");
+        Map<String,?> map = request.getParameterMap();
+        Set<?> keySet = map.keySet();
+        Iterator<?> it = keySet.iterator();
 
         
 
