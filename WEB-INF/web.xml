@@ -129,5 +129,58 @@
 		<url-pattern>/front</url-pattern>
 	</servlet-mapping>
 	
+	<!--ここからセッションがらみ-->
+	<servlet>
+		<servlet-name>GetCountServlet</servlet-name>
+		<servlet-class>session.GetCountServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetCountServlet</servlet-name>
+		<url-pattern>/getcountservlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>countshow</servlet-name>
+		<jsp-file>/session/countshow.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>countshow</servlet-name>
+		<url-pattern>/countshow</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SessionStartServlet</servlet-name>
+		<servlet-class>session.SessionStartServlet</servlet-class>
+	</servlet>
+    <servlet-mapping>
+		<servlet-name>SessionStartServlet</servlet-name>
+		<url-pattern>/sessionstart</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>sessionshow</servlet-name>
+		<jsp-file>/session/sessionshow.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sessionshow</servlet-name>
+		<url-pattern>/sessionshow</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SessionEndServlet</servlet-name>
+		<servlet-class>session.SessionEndServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SessionEndServlet</servlet-name>
+		<url-pattern>/sessionend</url-pattern>
+	</servlet-mapping>
+
+    <session-config>
+        <session-timeout>120</session-timeout>
+    </session-config>
+
+	<!--ここまでセッション-->
+
+
 
 </web-app>
