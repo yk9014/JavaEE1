@@ -13,6 +13,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+
+	<!--イベントリスナーここから-->
+	<listener>
+		<listener-class>event.MyServletContextListener</listener-class>
+	</listener>
+
+	<!--イベントリスナーここまで-->
+
 	<filter>
 		<filter-name>authenticatefilter</filter-name>
 		<filter-class>ttc.AuthenticateFilter</filter-class>
