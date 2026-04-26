@@ -21,6 +21,18 @@
 
 	<!--イベントリスナーここまで-->
 
+	<!--じゃんけんここから-->
+	<servlet>
+		<servlet-name>JankenServlet</servlet-name>
+		<servlet-class>janken.JankenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JankenServlet</servlet-name>
+		<url-pattern>/jankenservlet</url-pattern>
+	</servlet-mapping>
+	<!--じゃんけんここまで-->
+
+
 	<filter>
 		<filter-name>authenticatefilter</filter-name>
 		<filter-class>ttc.AuthenticateFilter</filter-class>
