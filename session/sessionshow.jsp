@@ -6,7 +6,7 @@
 	<h1>セッション情報</h1>
 	登録されたユーザー名：${sessionScope.name}<br>
 	登録されたパスワード：${sessionScope.pass}
-	コンテキストのパラメータ：${sessionScope.param}
+	<%--コンテキストのパラメータ：${sessionScope.param} --%>
 	
 </body>
 </html>
