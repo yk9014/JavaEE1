@@ -32,6 +32,28 @@
 	</servlet-mapping>
 	<!--じゃんけんここまで-->
 
+	<!--コンテキストのサンプル
+	<servlet>
+		<servlet-name>GetCountServlet</servlet-name>
+		<servlet-class>ttc.GetCountServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>countshow</servlet-name>
+		<jsp-file>/countshow.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetCountServlet</servlet-name>
+		<url-pattern>/getcountservlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>countshow</servlet-name>
+		<url-pattern>/countshow</url-pattern>
+	</servlet-mapping>
+
+	-->
+
 
 	<filter>
 		<filter-name>authenticatefilter</filter-name>
