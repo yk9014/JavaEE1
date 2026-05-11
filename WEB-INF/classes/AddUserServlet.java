@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.ArrayList;
 
+import ex.InputException;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -16,34 +17,47 @@ public class AddUserServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
-		//POST要求によって送信された文字列をクライアントで
-		//エンコードしたときの文字コードを指定する
-		//これを指定しないと文字化けする可能性がある
-		req.setCharacterEncoding("UTF-8");
-		
-		//POST要求によって送信されたパラメータを取得する
-		String n=req.getParameter("name");
-		String p=req.getParameter("pass");
-		
-		//UserBeanをインスタンス化し、データをセットする
-		UserBean user=new UserBean();
-		user.setName(n);
-		user.setPassWord(p);
-		
-		//リストに追加する
-		users.add(user);
+		try{
+			//POST要求によって送信された文字列をクライアントで
+			//エンコードしたときの文字コードを指定する
+			//これを指定しないと文字化けする可能性がある
+			req.setCharacterEncoding("UTF-8");
+			
+			//POST要求によって送信されたパラメータを取得する
+			String n=req.getParameter("name");
+			String p=req.getParameter("pass");
 
-		//HttpServletRequestの実装クラスのインスタンスに
-		//usersという名前でデータを登録する
-		req.setAttribute("users",users);
+			//入力内容のチェック
+
+			if(n==null||n.length()==0){
+				throw new ex.NoContentException("入力内容がありません。",null);
+			}
+			if(n.length()>20){
+				throw new ex.OverTwentyException("入力内容が長すぎます",null);
+			}
 		
-		//RequestDispatcherインターフェイスを実装するクラスの
-		//インスタンスを取得する
-		//引数は転送先のURL
-		RequestDispatcher dispatcher=
-			req.getRequestDispatcher("userslist");
-		
-		//転送先に要求を転送する
-		dispatcher.forward(req,res);
+			//UserBeanをインスタンス化し、データをセットする
+			UserBean user=new UserBean();
+			user.setName(n);
+			user.setPassWord(p);
+			
+			//リストに追加する
+			users.add(user);
+
+			//HttpServletRequestの実装クラスのインスタンスに
+			//usersという名前でデータを登録する
+			req.setAttribute("users",users);
+			
+			//RequestDispatcherインターフェイスを実装するクラスの
+			//インスタンスを取得する
+			//引数は転送先のURL
+			RequestDispatcher dispatcher=
+				req.getRequestDispatcher("userslist");
+			
+			//転送先に要求を転送する
+			dispatcher.forward(req,res);
+		}catch(InputException e){
+			throw new ServletException(e.getMessage(),e);
+		}
 	}
 }

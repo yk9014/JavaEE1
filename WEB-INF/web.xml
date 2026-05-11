@@ -21,6 +21,15 @@
 
 	<!--イベントリスナーここまで-->
 
+	<!--エラーページ-->
+	<error-page>
+		<exception-type>jakarta.servlet.ServletException</exception-type>
+		<location>/inputerror.jsp</location>
+	</error-page>
+
+	<!-- エラーページここまで -->
+
+
 	<!--じゃんけんここから-->
 	<servlet>
 		<servlet-name>JankenServlet</servlet-name>
