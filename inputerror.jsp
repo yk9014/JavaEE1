@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<h1>例外のメッセージ：${pageContext.exception.getMessage()}</h1>
-<h1>例外のタイプ：${pageContext.exception.getClass().getName()}</h1>
+<h1>例外のメッセージ：${pageContext.exception.message}</h1>
+<h1>例外のタイプ：${pageContext.exception.getClass().name}</h1>
 
 <a href="input.jsp">入力内容が不適切です。入力し直してください。</a>
 
