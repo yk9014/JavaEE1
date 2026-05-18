@@ -29,7 +29,33 @@
 
 	<!-- エラーページここまで -->
 
+	<!--ServletRequest Responseここから-->
 
+	<servlet>
+		<servlet-name>RequestTest</servlet-name>
+		<servlet-class>baseapi.RequestTestServlet</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>RequestTest</servlet-name>
+		<url-pattern>/requesttest</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CheckMapServlet</servlet-name>
+		<servlet-class>baseapi.CheckMapServlet</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>CheckMapServlet</servlet-name>
+		<url-pattern>/CheckMapServlet</url-pattern>
+	</servlet-mapping>
+
+
+
+	<!--ServletRequest Responseここまで-->
 	<!--じゃんけんここから-->
 	<servlet>
 		<servlet-name>JankenServlet</servlet-name>
