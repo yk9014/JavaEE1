@@ -13,6 +13,18 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+	<!--コンテキストの初期化パラメータここから-->
+	<context-param>
+		<param-name>date_format</param-name>
+		<param-value>yyyy/M/d(E) k:m:s</param-value>
+	</context-param>
+	<context-param>
+		<param-name>encode_type</param-name>
+		<param-value>UTF-8</param-value>
+	</context-param>
+
+	<!--コンテキストの初期化パラメータここまで-->
+  
 
 	<!--イベントリスナーここから-->
 	<listener>
