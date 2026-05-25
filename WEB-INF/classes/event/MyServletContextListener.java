@@ -9,7 +9,7 @@ public class MyServletContextListener implements ServletContextListener {
 		//オーバーライドする 
 		//WEBアプリケーションの開始直後に 
 		//サーブレットコンテナから呼び出される
-		System.out.println("dgj:akgal;:wg;:wejgl;:smlkadjglwk;ejfgal;jglkngal;kjgval;dwlkadlkwfgalkwdl;kal;ksadl;ksgaljwda;ljwekjg:adhgalwnvaoipevnrpbgvaowmgqoavaobnv;oea");
+		System.out.println("20260525init dgj:akgal;:wg;:wejgl;:smlkadjglwk;ejfgal;jglkngal;kjgval;dwlkadlkwfgalkwdl;kal;ksadl;ksgaljwda;ljwekjg:adhgalwnvaoipevnrpbgvaowmgqoavaobnv;oea");
 	}
 
 	public void contextDestroyed(ServletContextEvent sce) {
@@ -17,5 +17,7 @@ public class MyServletContextListener implements ServletContextListener {
 		 //オーバーライドする
 		 //WEBアプリケーションの終了直前に
 		 //サーブレットコンテナから呼び出される
+ 		System.out.println("20260525dest dgj:akgal;:wg;:wejgl;:smlkadjglwk;ejfgal;jglkngal;kjgval;dwlkadlkwfgalkwdl;kal;ksadl;ksgaljwda;ljwekjg:adhgalwnvaoipevnrpbgvaowmgqoavaobnv;oea");
+
 	}
 } 

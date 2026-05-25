@@ -14,6 +14,5 @@
         ${text}
     </c:forEach>
 </c:forEach>
-
 </body>
 </html>
