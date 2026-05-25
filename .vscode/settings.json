@@ -1,7 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "WEB-INF\\classes",
-        "WEB-INF\\classes\\event"
+        "WEB-INF/classes"
     ],
     "java.project.referencedLibraries": [
         "c:\\tomcat10\\lib\\jsp-api.jar",

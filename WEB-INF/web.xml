@@ -26,12 +26,12 @@
 	<!--コンテキストの初期化パラメータここまで-->
   
 
-	<!--イベントリスナーここから-->
+	<!--イベントリスナーここから
 	<listener>
 		<listener-class>event.MyServletContextListener</listener-class>
 	</listener>
 
-	<!--イベントリスナーここまで-->
+	イベントリスナーここまで-->
 
 	<!--エラーページ-->
 	<error-page>
