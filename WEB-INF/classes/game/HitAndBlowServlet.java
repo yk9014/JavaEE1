@@ -24,22 +24,31 @@ public class HitAndBlowServlet extends HttpServlet {
         }
 
         //セッションから表示用メッセージを取得。なければnull
-        String outputMessage = (String)session.getAttribute("message"); 
+        String outputMessage = "";
+        String sessionMessage = (String)session.getAttribute("outputMessage"); 
+        if(sessionMessage!=null){
+            outputMessage = sessionMessage;
+        }
 
         // 画面からの入力を受け取る
-        String userInput = request.getParameter("playerInput");
+        String userInput = request.getParameter("playerinput");
         
         // コアロジックを呼び出す（コマンドラインの時と全く同じメソッドが使える）
         String resultMessage = game.guess(userInput);
+        System.out.println("resultMessage"+resultMessage);
 
-        //表示結果を既存のメッセージに上書き
-        outputMessage += resultMessage;
+        //nullでなければ、表示結果を既存のメッセージに上書き
+
+        outputMessage += "<br>"+ userInput + "：" + resultMessage;
 
         // 上書き済みのメッセージをセット
-        session.setAttribute("message", resultMessage);
+        session.setAttribute("outputMessage", outputMessage);
+        System.out.println("outputMessage"+outputMessage);
         
         if (resultMessage.contains("勝ち") || resultMessage.contains("負け")) {
             session.removeAttribute("game"); // ゲーム終了ならセッションクリア
+
+            System.out.println("セッションクリア");
         }
         
         // JSPへフォワード

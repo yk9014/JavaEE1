@@ -85,7 +85,7 @@
 		<servlet-class>game.HitAndBlowServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-nameHitAndBlowServlet</servlet-name>
+		<servlet-name>HitAndBlowServlet</servlet-name>
 		<url-pattern>/HitAndBlowServlet</url-pattern>
 	</servlet-mapping>
 <!--じゃんけんここまで-->
