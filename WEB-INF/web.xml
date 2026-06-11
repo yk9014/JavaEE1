@@ -79,6 +79,17 @@
 	</servlet-mapping>
 	<!--じゃんけんここまで-->
 
+<!--じゃんけんここから-->
+	<servlet>
+		<servlet-name>HitAndBlowServlet</servlet-name>
+		<servlet-class>game.HitAndBlowServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-nameHitAndBlowServlet</servlet-name>
+		<url-pattern>/HitAndBlowServlet</url-pattern>
+	</servlet-mapping>
+<!--じゃんけんここまで-->
+
 	<!--コンテキストのサンプル
 	<servlet>
 		<servlet-name>GetCountServlet</servlet-name>
