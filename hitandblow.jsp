@@ -9,15 +9,9 @@
         <input type='submit' value='登録'>
 	</form>
 
-	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <h1>↓表示エリア</h1>
 
-<c:forEach var="out" items="${map}" >
-	<c:forEach var="array" items="${out}" >
-
-</c:forEach>
-</c:forEach>
-
+<%--メッセージは毎回全部出し--%>
 <% 
     if(session.getAttribute("outputMessage")!=null){
 %>

@@ -48,10 +48,11 @@ public class HitAndBlowServlet extends HttpServlet {
         if (resultMessage.contains("勝ち") || resultMessage.contains("負け")) {
             session.removeAttribute("game"); // ゲーム終了ならセッションクリア
 
+            //フロー確認用
             System.out.println("セッションクリア");
         }
         
-        // JSPへフォワード
+        //JSPへフォワード
         //RequestDispatcherインターフェイスを実装するクラスの
         //インスタンスを取得する
         //引数は転送先のURL
