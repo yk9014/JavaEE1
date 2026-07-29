@@ -26,4 +26,11 @@ public class HelloTag extends TagSupport {
 		//タグボディを評価しない
 		return SKIP_BODY;
 	}
+	
+	public int doEndTag() throws JspException {
+		return SKIP_PAGE;
+	}
+
+	
+	
 }
